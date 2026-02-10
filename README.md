@@ -64,3 +64,15 @@ cd backend
 python3 -m venv venv
 source venv/bin/activate
 pip install fastapi uvicorn
+ollama run tinyllama
+uvicorn main:app --host 127.0.0.1 --port 8000
+
+
+## Frontend Setup (Flutter Web)
+flutter config --enable-web
+cd frontend/private_ai_ui
+flutter run -d chrome
+flutter run -d web-server --web-port 3000
+http://localhost:3000
+
+
