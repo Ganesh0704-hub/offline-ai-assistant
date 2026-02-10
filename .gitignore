@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Flutter
+build/
+.dart_tool/
+.packages
+.pub-cache/
+
+# Models (large / binary files)
+model/
+*.gguf
+
+# AppImage / binaries
+*.AppImage
+OfflineAI.AppDir/
+
+# OS files
+.DS_Store
+Thumbs.db
