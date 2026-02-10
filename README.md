@@ -19,3 +19,48 @@ This project allows users to chat with an AI model **completely offline**, witho
 
 ## 🏗️ Architecture
 
+Browser (Flutter Web UI)
+|
+| HTTP POST
+v
+FastAPI Backend (localhost:8000)
+|
+v
+Ollama (Local LLM - TinyLlama)
+
+## 📁 Project Structure
+offline_ai_assistant/
+├── backend/ # FastAPI backend
+│ ├── main.py
+│ └── venv/
+├── frontend/ # Flutter Web UI
+│ └── private_ai_ui/
+├── model/ # (ignored) local LLM models
+├── .gitignore
+└── README.md
+
+> ⚠️ Large model files and virtual environments are excluded from GitHub using `.gitignore`.
+
+---
+
+## ⚙️ Requirements
+
+### Backend
+- Python 3.10+
+- Ollama installed
+- FastAPI
+- Uvicorn
+
+### Frontend
+- Flutter SDK (stable)
+- Chrome browser (for Flutter Web)
+
+---
+
+## 🔧 Backend Setup
+
+```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install fastapi uvicorn
